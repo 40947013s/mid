@@ -69,8 +69,8 @@ int main()
     fread( &header , sizeof(header) , 1 , fp_in );
 
    
-    double Sin = sin( angle * PI / 180.0 );
-    double Cos = cos( angle * PI / 180.0 );
+    double Sin = sin( (360-angle) * PI / 180.0 );
+    double Cos = cos( (360-angle) * PI / 180.0 );
     int32_t old_width = header.width;
     int32_t old_height = header.height;
     int32_t width = (int32_t)(old_width * Cos + old_height * Sin);
